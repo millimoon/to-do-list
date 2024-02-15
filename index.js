@@ -130,26 +130,31 @@ class ToDo {
     
 }
 
-// const inputWerVal = document.querySelector("inputWer").value;
-const inputWer = document.getElementById("inputWer");
-const inputWas = document.getElementById("inputWas");
-const inputHidden = document.getElementById("inputHidden");
-const inputSubmit = document.getElementById("inputSubmit");
+const formTodo = document.querySelectorAll('.formTodo input');
+const outputWer = document.querySelector('.outputWer');
+const formArray = Array.from(formTodo);
+// const inputWer = document.getElementById("inputWer");
+// const inputWas = document.getElementById("inputWas");
+// const inputHidden = document.getElementById("inputHidden");
+// const inputSubmit = document.getElementById("inputSubmit");
 
-const outputWer = document.getElementById("outputWer");
-const outputWas = document.getElementById("outputWas");
-const outputBtnAendern = document.getElementById("outputBtnAendern");
-const outputBtnLoeschen = document.getElementById("outputBtnLoeschen");
+// const outputWer = document.getElementById("outputWer");
+// const outputWas = document.getElementById("outputWas");
+// const outputBtnAendern = document.getElementById("outputBtnAendern");
+// const outputBtnLoeschen = document.getElementById("outputBtnLoeschen");
 
-// inputSubmit.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     const submitValue = '';
-//     formTodo.elements.
-    
-// })
+inputSubmit.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const submitValue = '';
+    submitValue = formArray.forEach(item => {
+        return item;
+    })
+    console.log(submitValue);
+})
 
 // console.log(inputWerVal);
-console.log(inputWer);
+console.log(formTodo);
+console.log(formArray);
 
 const ToDoList1 = new ToDoList();
 //const ToDo1 = new ToDo("Einkaufen", "Patrick");
