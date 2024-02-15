@@ -1,4 +1,4 @@
-const crypto = require('crypto')
+//const crypto = require('crypto')
 
 class ToDoList {
     constructor() {
@@ -118,7 +118,8 @@ class ToDo {
         this.erledigt = false;
         this.myuuid = crypto.randomUUID();
     }
-    updateToDo ({was, wer}) {
+    // updateToDo ({was, wer}) {
+    updateToDo (was, wer) {
         if (was) this.was = was;
         if (wer) this.wer = wer;
     }
@@ -129,16 +130,41 @@ class ToDo {
     
 }
 
+// const inputWerVal = document.querySelector("inputWer").value;
+const inputWer = document.getElementById("inputWer");
+const inputWas = document.getElementById("inputWas");
+const inputHidden = document.getElementById("inputHidden");
+const inputSubmit = document.getElementById("inputSubmit");
+
+const outputWer = document.getElementById("outputWer");
+const outputWas = document.getElementById("outputWas");
+const outputBtnAendern = document.getElementById("outputBtnAendern");
+const outputBtnLoeschen = document.getElementById("outputBtnLoeschen");
+
+// inputSubmit.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     const submitValue = '';
+//     formTodo.elements.
+    
+// })
+
+// console.log(inputWerVal);
+console.log(inputWer);
+
 const ToDoList1 = new ToDoList();
-const ToDo1 = new ToDo("Einkaufen", "Patrick");
+//const ToDo1 = new ToDo("Einkaufen", "Patrick");
 
 ToDoList1.addTodo("Einkaufen", "Patrick1");
 ToDoList1.addTodo("Einkaufen", "Patrick2");
 ToDoList1.addTodo("Einkaufen", "Patrick3");
 ToDoList1.addTodo("Einkaufen", "Patrick4");
 ToDoList1.addTodo("Einkaufen", "Patrick5");
-const todoZuloeschen = ToDoList1.todos.at(2)
-ToDoList1.deleteTodo(todoZuloeschen);
+// const todoZuloeschen = ToDoList1.todos.at(2);
+// todoZuloeschen.updateToDo("Einkaufen","Stephan");
+// console.log(todoZuloeschen);
+// ToDoList1.deleteTodo(todoZuloeschen);
 console.log(ToDoList1)
+
+
 
 

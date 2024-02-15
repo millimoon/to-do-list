@@ -10,12 +10,21 @@
 <body>
     <h1>To-Do-Liste</h1>
         <div class="container">
-            <form name="eingabe">
-                <input name="wer" placeholder="Wer" />
-                <input name="was" placeholder="Was" />
-                <input name="wann" placeholder="Wann" />
-                <input type="hidden" name="temp"/>
-                <input type="submit" name="Speichern" value="Speichern" />
+            <section >
+                <ul>
+                    <li>
+                        <div id="outputWer" class="outputWer"></div>
+                        <div id="outputWas" class="outputWas"></div>
+                        <div id="outputBtnAendern" class="outputBtnAendern"></div>
+                        <div id="outputBtnLoeschen" class="outputBtnLoeschen"></div>
+                    </li>                    
+                </ul>
+            </section>
+            <form class="formTodo"name="eingabe">
+                <input id="inputWer" class="inputWer" name="wer" value="JohnDoe" placeholder="Wer" />
+                <input id="inputWas" class="inputWas" name="was" placeholder="Was" />
+                <input id="inputHidden" class="inputHidden" type="hidden" name="temp"/>
+                <input id="inputSubmit" class="inputSubmit" type="submit" name="Speichern" value="Speichern" />
               </form>
         </div>
 </body>
